@@ -2,18 +2,18 @@
   <div class="input-form">
     <v-row>
       <v-col cols="6">
-        <v-select :items="icons" label="アイコン" outlined/>
+        <v-select :items="icons" label="アイコン" outlined hide-details/>
       </v-col>
       <v-col cols="6">
-        <v-text-field label="色" outlined/>
+        <v-text-field label="色" outlined hide-details/>
       </v-col>
     </v-row>
     <v-row>
       <v-col cols="6">
-        <v-text-field label="左側のテキスト" outlined clearable/>
+        <v-text-field label="左側のテキスト" outlined clearable hide-details/>
       </v-col>
       <v-col cols="6">
-        <v-text-field label="右側のテキスト" outlined clearable/>
+        <v-text-field label="右側のテキスト" outlined clearable hide-details/>
       </v-col>
     </v-row>
   </div>
