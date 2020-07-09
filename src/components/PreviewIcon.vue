@@ -24,7 +24,7 @@ export default {
   ],
   computed: {
     imgTAG () {
-      return `<img src="https://img.shields.io/badge/${this.label}-${this.version}-${this.color}?&style=flat">`
+      return `<img src="https://img.shields.io/badge/${this.label}-${this.version}-${this.color.replace('#', '')}?&style=flat">`
     }
   }
 }

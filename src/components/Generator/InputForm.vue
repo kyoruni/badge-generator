@@ -1,20 +1,8 @@
 <template>
   <div class="input-form">
     <v-row>
-      <v-col cols="12">
-        <v-color-picker
-          v-model="selectColor"
-          hide-mode-switch
-        />
-        <v-select
-          v-model="selectColor"
-          label="色"
-          outlined
-          hide-details
-          item-text="label"
-          item-value="value"
-          :items="colors"
-        />
+      <v-col class="d-flex justify-center">
+        <v-color-picker v-model="selectColor" hide-mode-switch/>
       </v-col>
     </v-row>
     <v-row>
@@ -49,11 +37,7 @@ export default {
   },
   watch: {
     selectColor (value) {
-    let updateValue = null
-    if (value.toString().match(/#[a-zA-Z0-9]{8}/)) {
-        updateValue = value.substr(0, 7);
-      }
-      this.$emit('changeColor', updateValue)
+      this.$emit('changeColor', value)
     },
     inputLabel (value) {
       this.$emit('changeLabel', value)
@@ -69,3 +53,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.v-color-picker__input:last-child {
+  display: none;
+}
+</style>

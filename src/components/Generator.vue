@@ -27,7 +27,7 @@ export default {
   },
   data () {
     return {
-      color: '4fc08d',
+      color: '#4fc08d',
       label: 'Vue.js',
       version: '2.6.11',
     }
