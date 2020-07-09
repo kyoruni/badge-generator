@@ -20,10 +20,11 @@ export default {
   props: [
     'color',
     'label',
+    'version',
   ],
   computed: {
     imgTAG () {
-      return `<img src="https://img.shields.io/badge/${this.label}-1.1-${this.color}?&style=flat">`
+      return `<img src="https://img.shields.io/badge/${this.label}-${this.version}-${this.color}?&style=flat">`
     }
   }
 }

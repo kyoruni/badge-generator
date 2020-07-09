@@ -18,7 +18,7 @@
         <v-text-field v-model="inputLabel" label="ラベル" outlined clearable hide-details/>
       </v-col>
       <v-col cols="6">
-        <v-text-field label="バージョン" outlined clearable hide-details/>
+        <v-text-field v-model="inputVersion" label="バージョン" outlined clearable hide-details/>
       </v-col>
     </v-row>
   </div>
@@ -29,11 +29,13 @@ export default {
   props: [
     'color',
     'label',
+    'version',
   ],
   data () {
     return {
       selectColor: '',
       inputLabel: '',
+      inputVersion: '',
       colors: [
         { label: 'Vue.js', value: '4fc08d' },
         { label: 'red', value: 'red' },
@@ -48,11 +50,15 @@ export default {
     },
     inputLabel (value) {
       this.$emit('changeLabel', value)
-    }
+    },
+    inputVersion (value) {
+      this.$emit('changeVersion', value)
+    },
   },
   beforeMount () {
     this.selectColor = this.color
     this.inputLabel = this.label
+    this.inputVersion = this.version
   },
 }
 </script>
