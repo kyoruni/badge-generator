@@ -11,6 +11,25 @@
       </v-col>
     </v-row>
     <v-row>
+      <v-col class="d-flex justify-center">
+        <v-btn class="mr-1" small outlined color="indigo">Success</v-btn>
+        <v-btn class="mr-1" small outlined color="indigo">Important</v-btn>
+        <v-btn class="mr-1" small outlined color="indigo">Critical</v-btn>
+        <v-btn class="mr-1" small outlined color="indigo">Information</v-btn>
+        <v-btn small outlined color="indigo">Inactive</v-btn>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col class="d-flex justify-center">
+        <v-btn class="mr-1" small outlined color="indigo">Ruby</v-btn>
+        <v-btn class="mr-1" small outlined color="indigo">PHP</v-btn>
+        <v-btn class="mr-1" small outlined color="indigo">Laravel</v-btn>
+        <v-btn class="mr-1" small outlined color="indigo">Vue.js</v-btn>
+        <v-btn class="mr-1" small outlined color="indigo">Docker</v-btn>
+        <v-btn small outlined color="indigo">Heroku</v-btn>
+      </v-col>
+    </v-row>
+    <v-row>
       <v-col cols="6">
         <v-text-field v-model="inputLabel" label="ラベル" outlined clearable hide-details/>
       </v-col>
@@ -58,9 +77,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.v-color-picker__input:last-child {
-  display: none;
-}
-</style>

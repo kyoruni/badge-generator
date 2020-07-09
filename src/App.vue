@@ -3,7 +3,7 @@
     <header-menu/>
     <v-container>
       <v-row>
-        <v-col cols="10" offset="1" md="4" offset-md="4">
+        <v-col cols="10" md="6" class="content-wrapper">
           <generator/>
         </v-col>
       </v-row>
@@ -24,6 +24,12 @@ export default {
 }
 </script>
 
+<style scoped>
+.content-wrapper {
+  margin: 0 auto;
+}
+</style>
+
 <style>
 .v-application code {
   all: unset;
@@ -31,5 +37,9 @@ export default {
 
 pre {
   white-space: pre-line;
+}
+/* ボタンが勝手に大文字になるので解除 */
+.v-btn {
+  text-transform: none;
 }
 </style>
