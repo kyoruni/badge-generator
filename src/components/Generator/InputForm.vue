@@ -1,14 +1,20 @@
 <template>
   <div class="input-form">
     <v-row>
-      <v-select :items="icons" label="アイコン" outlined/>
+      <v-col cols="6">
+        <v-select :items="icons" label="アイコン" outlined/>
+      </v-col>
+      <v-col cols="6">
+        <v-text-field label="色" outlined/>
+      </v-col>
     </v-row>
     <v-row>
-      <v-text-field label="色" outlined/>
-    </v-row>
-    <v-row>
-      <v-text-field label="左側のテキスト" outlined/>
-      <v-text-field label="右側のテキスト" outlined/>
+      <v-col cols="6">
+        <v-text-field label="左側のテキスト" outlined/>
+      </v-col>
+      <v-col cols="6">
+        <v-text-field label="右側のテキスト" outlined/>
+      </v-col>
     </v-row>
   </div>
 </template>
