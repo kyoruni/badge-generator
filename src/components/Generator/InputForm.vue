@@ -16,9 +16,10 @@
           v-for="defaultColor in defaultColors"
           :key="defaultColor.label"
           class="mr-1"
-          color="indigo"
+          :color="defaultColor.color"
           small
           outlined
+          @click="setColorButton(defaultColor.color)"
         >
           {{ defaultColor.label }}
         </v-btn>
@@ -30,9 +31,10 @@
           v-for="presetColor in presetColors"
           :key="presetColor.label"
           class="mr-1"
-          color="indigo"
+          :color="presetColor.color"
           small
           outlined
+          @click="setColorButton(presetColor.color)"
         >
           {{ presetColor.label }}
         </v-btn>
@@ -71,22 +73,27 @@ export default {
   computed: {
     defaultColors () {
       return [
-        { label: 'Success' },
-        { label: 'Important' },
-        { label: 'Critical' },
-        { label: 'Information' },
-        { label: 'Inactive' },
+        { label: 'Success', color: '#44cc11' },
+        { label: 'Important', color: '#fe7d37' },
+        { label: 'Critical', color: '#e05d44' },
+        { label: 'Information', color: '#007ec6' },
+        { label: 'Inactive', color: '#9f9f9f' },
       ]
     },
     presetColors () {
       return [
-        { label: 'Ruby' },
-        { label: 'PHP' },
-        { label: 'Laravel' },
-        { label: 'Vue.js' },
-        { label: 'Docker' },
-        { label: 'Heroku' },
+        { label: 'Ruby', color: '#cc0000' },
+        { label: 'PHP', color: '#8892be' },
+        { label: 'Laravel', color: '#ff2d20' },
+        { label: 'Vue.js', color: '#4fc08d' },
+        { label: 'Docker', color: '#53d2f9' },
+        { label: 'Heroku', color: '#79589f' },
       ]
+    }
+  },
+  methods: {
+    setColorButton (color) {
+      this.selectColor = color
     }
   },
   watch: {
