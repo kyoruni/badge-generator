@@ -36,7 +36,7 @@ export default {
 }
 
 pre {
-  white-space: pre-line;
+  overflow: auto;
 }
 /* ボタンが勝手に大文字になるので解除 */
 .v-btn {
