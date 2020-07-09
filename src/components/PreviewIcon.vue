@@ -17,14 +17,12 @@
 
 <script>
 export default {
-  data () {
-    return {
-      icon: 'appveyor',
-    }
-  },
+  props: [
+    'color',
+  ],
   computed: {
     imgTAG () {
-      return `<img src="https://img.shields.io/badge/fuga-ff99cc?logo=${this.icon}&style=flat">`
+      return `<img src="https://img.shields.io/badge/PHP-1.1-${this.color}?&style=flat">`
     }
   }
 }

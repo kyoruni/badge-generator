@@ -1,7 +1,7 @@
 <template>
   <div class="generator">
-    <input-form/>
-    <preview-icon/>
+    <input-form @changeColor="changeColor($event)"/>
+    <preview-icon :color="color"/>
   </div>
 </template>
 
@@ -14,5 +14,15 @@ export default {
     InputForm,
     PreviewIcon,
   },
+  data () {
+    return {
+      color: 'red',
+    }
+  },
+  methods: {
+    changeColor (event) {
+      this.color = event
+    }
+  }
 }
 </script>
