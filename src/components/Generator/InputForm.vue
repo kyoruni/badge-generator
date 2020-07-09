@@ -3,7 +3,7 @@
     <v-row>
       <v-col cols="12">
         <v-select
-          v-model="color"
+          v-model="selectColor"
           label="色"
           outlined
           hide-details
@@ -26,10 +26,14 @@
 
 <script>
 export default {
+  props: [
+    'color',
+  ],
   data () {
     return {
-      color: '',
+      selectColor: '',
       colors: [
+        { label: 'Vue.js', value: '4fc08d' },
         { label: 'red', value: 'red' },
         { label: 'blue', value: 'blue' },
         { label: 'pink', value: 'ff99cc' }
@@ -37,9 +41,12 @@ export default {
     }
   },
   watch: {
-    color (value) {
+    selectColor (value) {
       this.$emit('changeColor', value)
     }
+  },
+  beforeMount () {
+    this.selectColor = this.color
   },
 }
 </script>
