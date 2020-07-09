@@ -11,7 +11,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col class="d-flex justify-center">
+      <v-col class="d-flex justify-center pt-0">
         <v-btn class="mr-1" small outlined color="indigo">Success</v-btn>
         <v-btn class="mr-1" small outlined color="indigo">Important</v-btn>
         <v-btn class="mr-1" small outlined color="indigo">Critical</v-btn>
@@ -20,7 +20,7 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col class="d-flex justify-center">
+      <v-col class="d-flex justify-center pt-0">
         <v-btn class="mr-1" small outlined color="indigo">Ruby</v-btn>
         <v-btn class="mr-1" small outlined color="indigo">PHP</v-btn>
         <v-btn class="mr-1" small outlined color="indigo">Laravel</v-btn>
