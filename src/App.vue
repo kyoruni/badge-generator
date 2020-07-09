@@ -23,3 +23,13 @@ export default {
   },
 }
 </script>
+
+<style>
+.v-application code {
+  all: unset;
+}
+
+pre {
+  overflow: auto;
+}
+</style>
