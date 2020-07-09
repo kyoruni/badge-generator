@@ -1,9 +1,9 @@
 <template>
   <div class="header-menu">
     <v-app-bar dark flat :color="mainColor">
-      <v-app-bar-title>
+      <v-toolbar-title>
         Badge Generator
-      </v-app-bar-title>
+      </v-toolbar-title>
     </v-app-bar>
   </div>
 </template>
