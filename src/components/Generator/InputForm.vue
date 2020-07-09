@@ -9,11 +9,8 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="6">
-        <v-text-field label="左側のテキスト" outlined clearable hide-details/>
-      </v-col>
-      <v-col cols="6">
-        <v-text-field label="右側のテキスト" outlined clearable hide-details/>
+      <v-col cols="12">
+        <v-text-field label="ラベル" outlined clearable hide-details/>
       </v-col>
     </v-row>
   </div>

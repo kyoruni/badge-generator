@@ -19,7 +19,12 @@
 export default {
   data () {
     return {
-      imgTAG: '<img src="https://img.shields.io/badge/hoge-fuga-ff99cc?logo=appveyor&style=flat">',
+      icon: 'appveyor',
+    }
+  },
+  computed: {
+    imgTAG () {
+      return `<img src="https://img.shields.io/badge/fuga-ff99cc?logo=${this.icon}&style=flat">`
     }
   }
 }
