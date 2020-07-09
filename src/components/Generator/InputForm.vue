@@ -15,7 +15,7 @@
     </v-row>
     <v-row>
       <v-col cols="6">
-        <v-text-field label="ラベル" outlined clearable hide-details/>
+        <v-text-field v-model="inputLabel" label="ラベル" outlined clearable hide-details/>
       </v-col>
       <v-col cols="6">
         <v-text-field label="バージョン" outlined clearable hide-details/>
@@ -28,10 +28,12 @@
 export default {
   props: [
     'color',
+    'label',
   ],
   data () {
     return {
       selectColor: '',
+      inputLabel: '',
       colors: [
         { label: 'Vue.js', value: '4fc08d' },
         { label: 'red', value: 'red' },
@@ -43,10 +45,14 @@ export default {
   watch: {
     selectColor (value) {
       this.$emit('changeColor', value)
+    },
+    inputLabel (value) {
+      this.$emit('changeLabel', value)
     }
   },
   beforeMount () {
     this.selectColor = this.color
+    this.inputLabel = this.label
   },
 }
 </script>

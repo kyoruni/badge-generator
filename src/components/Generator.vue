@@ -1,7 +1,15 @@
 <template>
   <div class="generator">
-    <input-form :color="color" @changeColor="changeColor($event)"/>
-    <preview-icon :color="color"/>
+    <input-form
+      :color="color"
+      :label="label"
+      @changeColor="changeColor($event)"
+      @changeLabel="changeLabel($event)"
+    />
+    <preview-icon
+      :color="color"
+      :label="label"
+    />
   </div>
 </template>
 
@@ -17,11 +25,15 @@ export default {
   data () {
     return {
       color: '4fc08d',
+      label: 'Vue.js',
     }
   },
   methods: {
     changeColor (event) {
       this.color = event
+    },
+    changeLabel (event) {
+      this.label = event
     }
   }
 }
