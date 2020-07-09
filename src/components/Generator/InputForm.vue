@@ -12,21 +12,30 @@
     </v-row>
     <v-row>
       <v-col class="d-flex justify-center pt-0">
-        <v-btn class="mr-1" small outlined color="indigo">Success</v-btn>
-        <v-btn class="mr-1" small outlined color="indigo">Important</v-btn>
-        <v-btn class="mr-1" small outlined color="indigo">Critical</v-btn>
-        <v-btn class="mr-1" small outlined color="indigo">Information</v-btn>
-        <v-btn small outlined color="indigo">Inactive</v-btn>
+        <v-btn
+          v-for="defaultColor in defaultColors"
+          :key="defaultColor.label"
+          class="mr-1"
+          color="indigo"
+          small
+          outlined
+        >
+          {{ defaultColor.label }}
+        </v-btn>
       </v-col>
     </v-row>
     <v-row>
       <v-col class="d-flex justify-center pt-0">
-        <v-btn class="mr-1" small outlined color="indigo">Ruby</v-btn>
-        <v-btn class="mr-1" small outlined color="indigo">PHP</v-btn>
-        <v-btn class="mr-1" small outlined color="indigo">Laravel</v-btn>
-        <v-btn class="mr-1" small outlined color="indigo">Vue.js</v-btn>
-        <v-btn class="mr-1" small outlined color="indigo">Docker</v-btn>
-        <v-btn small outlined color="indigo">Heroku</v-btn>
+        <v-btn
+          v-for="presetColor in presetColors"
+          :key="presetColor.label"
+          class="mr-1"
+          color="indigo"
+          small
+          outlined
+        >
+          {{ presetColor.label }}
+        </v-btn>
       </v-col>
     </v-row>
     <v-row>
@@ -57,6 +66,27 @@ export default {
       selectColor: '',
       inputLabel: '',
       inputVersion: '',
+    }
+  },
+  computed: {
+    defaultColors () {
+      return [
+        { label: 'Success' },
+        { label: 'Important' },
+        { label: 'Critical' },
+        { label: 'Information' },
+        { label: 'Inactive' },
+      ]
+    },
+    presetColors () {
+      return [
+        { label: 'Ruby' },
+        { label: 'PHP' },
+        { label: 'Laravel' },
+        { label: 'Vue.js' },
+        { label: 'Docker' },
+        { label: 'Heroku' },
+      ]
     }
   },
   watch: {
