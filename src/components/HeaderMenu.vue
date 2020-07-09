@@ -1,9 +1,11 @@
 <template>
-  <v-app-bar dark flat :color="mainColor">
-    <v-toolbar-title>
-      Badge Generator
-    </v-toolbar-title>
-  </v-app-bar>
+  <div class="header-menu">
+    <v-app-bar dark flat :color="mainColor">
+      <v-app-bar-title>
+        Badge Generator
+      </v-app-bar-title>
+    </v-app-bar>
+  </div>
 </template>
 
 <script>

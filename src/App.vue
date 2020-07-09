@@ -1,9 +1,14 @@
 <template>
-  <div id="app">
+  <v-app>
     <header-menu/>
-    <generator/>
-    hoge
-  </div>
+    <v-container>
+      <v-row>
+        <v-col cols="12" md="6" offset-md="3" style="background: aqua;">
+          <generator/>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app>
 </template>
 
 <script>
@@ -15,6 +20,6 @@ export default {
   components: {
     HeaderMenu,
     Generator,
-  }
+  },
 }
 </script>
