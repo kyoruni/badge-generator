@@ -3,7 +3,7 @@
     <header-menu/>
     <v-container>
       <v-row>
-        <v-col cols="12" md="6" offset-md="3" style="background: aqua;">
+        <v-col cols="12" md="6" offset-md="3">
           <generator/>
         </v-col>
       </v-row>
