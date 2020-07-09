@@ -2,7 +2,12 @@
   <div class="input-form">
     <v-row>
       <v-col class="d-flex justify-center">
-        <v-color-picker v-model="selectColor" hide-mode-switch/>
+        <v-color-picker
+          v-model="selectColor"
+          hide-mode-switch
+          show-swatches
+          :swatches="colors"
+        />
       </v-col>
     </v-row>
     <v-row>
