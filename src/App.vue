@@ -30,6 +30,6 @@ export default {
 }
 
 pre {
-  overflow: auto;
+  white-space: pre-line;
 }
 </style>
