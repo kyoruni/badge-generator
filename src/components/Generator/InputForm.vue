@@ -1,6 +1,14 @@
 <template>
   <div class="input-form">
     <v-row>
+      <v-col cols="6">
+        <v-text-field v-model="inputLabel" label="ラベル" outlined clearable hide-details/>
+      </v-col>
+      <v-col cols="6">
+        <v-text-field v-model="inputVersion" label="バージョン" outlined clearable hide-details/>
+      </v-col>
+    </v-row>
+    <v-row>
       <v-col class="d-flex justify-center">
         <v-color-picker
           v-model="selectColor"
@@ -37,14 +45,6 @@
         >
           {{ presetColor.label }}
         </v-btn>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="6">
-        <v-text-field v-model="inputLabel" label="ラベル" outlined clearable hide-details/>
-      </v-col>
-      <v-col cols="6">
-        <v-text-field v-model="inputVersion" label="バージョン" outlined clearable hide-details/>
       </v-col>
     </v-row>
   </div>
