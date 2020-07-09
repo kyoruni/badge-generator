@@ -10,10 +10,10 @@
     </v-row>
     <v-row>
       <v-col cols="6">
-        <v-text-field label="左側のテキスト" outlined/>
+        <v-text-field label="左側のテキスト" outlined clearable/>
       </v-col>
       <v-col cols="6">
-        <v-text-field label="右側のテキスト" outlined/>
+        <v-text-field label="右側のテキスト" outlined clearable/>
       </v-col>
     </v-row>
   </div>
