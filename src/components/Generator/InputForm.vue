@@ -6,7 +6,6 @@
           v-model="selectColor"
           hide-mode-switch
           show-swatches
-          :swatches="colors"
         />
       </v-col>
     </v-row>
@@ -52,16 +51,11 @@
 </template>
 
 <script>
-import colors from '@/mixins/colors.js'
-
 export default {
   props: [
     'color',
     'label',
     'version',
-  ],
-  mixins: [
-    colors,
   ],
   data () {
     return {
