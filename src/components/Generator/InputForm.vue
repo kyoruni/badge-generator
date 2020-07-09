@@ -25,23 +25,22 @@
 </template>
 
 <script>
+import colors from '@/mixins/colors.js'
+
 export default {
   props: [
     'color',
     'label',
     'version',
   ],
+  mixins: [
+    colors,
+  ],
   data () {
     return {
       selectColor: '',
       inputLabel: '',
       inputVersion: '',
-      colors: [
-        { label: 'Vue.js', value: '4fc08d' },
-        { label: 'red', value: 'red' },
-        { label: 'blue', value: 'blue' },
-        { label: 'pink', value: 'ff99cc' }
-      ]
     }
   },
   watch: {
