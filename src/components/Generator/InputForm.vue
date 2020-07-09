@@ -2,6 +2,10 @@
   <div class="input-form">
     <v-row>
       <v-col cols="12">
+        <v-color-picker
+          v-model="selectColor"
+          hide-mode-switch
+        />
         <v-select
           v-model="selectColor"
           label="色"
@@ -45,7 +49,11 @@ export default {
   },
   watch: {
     selectColor (value) {
-      this.$emit('changeColor', value)
+    let updateValue = null
+    if (value.toString().match(/#[a-zA-Z0-9]{8}/)) {
+        updateValue = value.substr(0, 7);
+      }
+      this.$emit('changeColor', updateValue)
     },
     inputLabel (value) {
       this.$emit('changeLabel', value)
