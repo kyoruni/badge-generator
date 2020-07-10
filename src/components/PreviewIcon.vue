@@ -4,15 +4,7 @@
       <div class="badge-wrapper">
         <div v-html="imgTAG"/>
       </div>
-      <v-card outlined color="#f0f0f0" class="text-left mt-2">
-        <v-card-text class="text-left pt-0 pb-0">
-          <pre>
-            <code>
-              {{ imgTAG }}
-            </code>
-          </pre>
-        </v-card-text>
-      </v-card>
+      <v-text-field v-model="imgTAG" outlined readonly hide-details/>
     </div>
   </div>
 </template>

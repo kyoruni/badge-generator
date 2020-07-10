@@ -31,13 +31,6 @@ export default {
 </style>
 
 <style>
-.v-application code {
-  all: unset;
-}
-
-pre {
-  overflow: auto;
-}
 /* ボタンが勝手に大文字になるので解除 */
 .v-btn {
   text-transform: none;
