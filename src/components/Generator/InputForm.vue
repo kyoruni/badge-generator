@@ -145,9 +145,11 @@ export default {
       this.$emit('changeColor', value)
     },
     inputLeftText (value) {
+      if (!value) value = ''
       this.$emit('changeLeftText', value)
     },
     inputRightText (value) {
+      if (!value) value = ''
       this.$emit('changeRightText', value)
     },
   },
