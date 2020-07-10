@@ -5,7 +5,15 @@
         <div v-html="imgTAG"/>
       </div>
       <div class="d-flex align-center">
-        <v-text-field id="imgTAG" class="mr-2" background-color="#f0f0f0" v-model="imgTAG" outlined readonly hide-details/>
+        <v-text-field
+          id="imgTAG"
+          class="mr-2"
+          background-color="#f0f0f0"
+          v-model="imgTAG"
+          outlined
+          readonly
+          hide-details
+        />
         <v-btn
           title="クリップボードにコピー"
           icon
@@ -28,12 +36,12 @@ export default {
   props: [
     'type',
     'color',
-    'label',
+    'leftText',
     'version',
   ],
   computed: {
     imgTAG () {
-      return `<img src="https://img.shields.io/badge/${this.label}-${this.version}-${this.color.replace('#', '')}?&style=${this.type}">`
+      return `<img src="https://img.shields.io/badge/${this.leftText}-${this.version}-${this.color.replace('#', '')}?&style=${this.type}">`
     }
   },
   methods: {

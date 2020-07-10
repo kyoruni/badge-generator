@@ -15,7 +15,7 @@
     </v-row>
     <v-row>
       <v-col cols="6">
-        <v-text-field v-model="inputLabel" label="左テキスト" outlined clearable hide-details/>
+        <v-text-field v-model="inputLeftText" label="左テキスト" outlined clearable hide-details/>
       </v-col>
       <v-col cols="6">
         <v-text-field v-model="inputVersion" label="右テキスト" outlined clearable hide-details/>
@@ -70,14 +70,14 @@ export default {
   props: [
     'type',
     'color',
-    'label',
+    'leftText',
     'version',
   ],
   data () {
     return {
       selectType: '',
       selectColor: '',
-      inputLabel: '',
+      inputLeftText: '',
       inputVersion: '',
     }
   },
@@ -122,8 +122,8 @@ export default {
     selectColor (value) {
       this.$emit('changeColor', value)
     },
-    inputLabel (value) {
-      this.$emit('changeLabel', value)
+    inputLeftText (value) {
+      this.$emit('changeLeftText', value)
     },
     inputVersion (value) {
       this.$emit('changeVersion', value)
@@ -132,7 +132,7 @@ export default {
   beforeMount () {
     this.selectType = this.type
     this.selectColor = this.color
-    this.inputLabel = this.label
+    this.inputLeftText = this.leftText
     this.inputVersion = this.version
   },
 }

@@ -3,17 +3,17 @@
     <input-form
       :type="type"
       :color="color"
-      :label="label"
+      :leftText="leftText"
       :version="version"
       @changeType="changeType($event)"
       @changeColor="changeColor($event)"
-      @changeLabel="changeLabel($event)"
+      @changeLeftText="changeLeftText($event)"
       @changeVersion="changeVersion($event)"
     />
     <preview-icon
       :type="type"
       :color="color"
-      :label="label"
+      :leftText="leftText"
       :version="version"
     />
   </div>
@@ -32,7 +32,7 @@ export default {
     return {
       type: 'flat',
       color: '#44cc11',
-      label: 'hoge',
+      leftText: 'hoge',
       version: '1.2',
     }
   },
@@ -43,8 +43,8 @@ export default {
     changeColor (event) {
       this.color = event
     },
-    changeLabel (event) {
-      this.label = event
+    changeLeftText (event) {
+      this.leftText = event
     },
     changeVersion (event) {
       this.version = event
