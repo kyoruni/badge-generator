@@ -52,7 +52,7 @@
           :color="defaultColor.color"
           small
           outlined
-          @click="setColorButton(defaultColor.color)"
+          @click="setColorButton(defaultColor)"
         >
           {{ defaultColor.label }}
         </v-btn>
@@ -131,7 +131,7 @@ export default {
   methods: {
     setColorButton (preset) {
       this.selectColor = preset.color
-      this.selectIcon = preset.icon
+      if (preset.icon) this.selectIcon = preset.icon
     }
   },
   watch: {
