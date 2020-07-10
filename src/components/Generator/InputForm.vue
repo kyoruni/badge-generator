@@ -99,35 +99,6 @@ export default {
       inputRightText: '',
     }
   },
-  computed: {
-    types () {
-      return [
-        { label: 'Plastic', value: 'plastic' },
-        { label: 'Flat', value: 'flat' },
-        { label: 'Square', value: 'flat-square' },
-        { label: 'For the Badge', value: 'for-the-badge' },
-      ]
-    },
-    defaultColors () {
-      return [
-        { label: 'Success', color: '#44cc11' },
-        { label: 'Important', color: '#fe7d37' },
-        { label: 'Critical', color: '#e05d44' },
-        { label: 'Information', color: '#007ec6' },
-        { label: 'Inactive', color: '#9f9f9f' },
-      ]
-    },
-    presetColors () {
-      return [
-        { label: 'Ruby', color: '#cc0000', icon: 'ruby' },
-        { label: 'PHP', color: '#8892be', icon: 'php' },
-        { label: 'Laravel', color: '#ff2d20', icon: 'laravel' },
-        { label: 'Vue.js', color: '#4fc08d', icon: 'vue.js' },
-        { label: 'Docker', color: '#53d2f9', icon: 'docker' },
-        { label: 'Heroku', color: '#79589f', icon: 'heroku' },
-      ]
-    }
-  },
   methods: {
     setColorButton (preset) {
       this.selectColor = preset.color
