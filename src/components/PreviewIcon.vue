@@ -7,6 +7,8 @@
       <div class="d-flex align-center">
         <v-text-field id="imgTAG" class="mr-2" v-model="imgTAG" outlined readonly hide-details/>
         <v-btn
+          title="クリップボードにコピー"
+          icon
           depressed
           dark
           color="#93b6e8"
@@ -14,7 +16,7 @@
           v-clipboard:success="copySuccess"
           v-clipboard:error="copyError"
         >
-          コピー
+          <v-icon>far fa-copy</v-icon>
         </v-btn>
       </div>
     </div>
