@@ -40,9 +40,14 @@ export default {
     'leftText',
     'rightText',
   ],
+  data () {
+    return {
+      iconURL: null,
+    }
+  },
   computed: {
     imgTAG () {
-      return `<img src="https://img.shields.io/badge/${this.leftText}-${this.rightText}-${this.color.replace('#', '')}?&logo=${this.icon}&style=${this.type}">`
+      return `<img src="https://img.shields.io/badge/${this.leftText}-${this.rightText}-${this.color.replace('#', '')}?${this.iconURL}&style=${this.type}">`
     }
   },
   methods: {
@@ -51,8 +56,19 @@ export default {
     },
     copyError () {
       alert('コピーに失敗しました…')
+    },
+    setIconURL () {
+      this.iconURL = this.icon ? `&logo=${this.icon}` : ''
     }
   },
+  watch: {
+    icon () {
+      this.setIconURL()
+    }
+  },
+  mounted () {
+    this.setIconURL()
+  }
 }
 </script>
 

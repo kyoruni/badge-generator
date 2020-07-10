@@ -34,7 +34,7 @@ export default {
   data () {
     return {
       type: 'flat',
-      icon: 'Gatsby',
+      icon: null,
       color: '#44cc11',
       leftText: 'hoge',
       rightText: '1.2',
