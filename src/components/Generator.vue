@@ -35,9 +35,9 @@ export default {
     return {
       type: 'flat',
       icon: null,
-      color: '#44cc11',
-      leftText: 'hoge',
-      rightText: '1.2',
+      color: '#007ec6',
+      leftText: 'license',
+      rightText: 'MIT',
     }
   },
   methods: {
