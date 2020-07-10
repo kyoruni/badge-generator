@@ -27,6 +27,8 @@
           v-model="selectColor"
           hide-mode-switch
           show-swatches
+          canvas-height="100"
+          swatches-max-height="100"
         />
       </v-col>
     </v-row>
