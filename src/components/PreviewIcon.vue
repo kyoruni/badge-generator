@@ -1,7 +1,7 @@
 <template>
   <div class="preview-icon">
     <div class="text-center mt-2">
-      <div class="badge-wrapper">
+      <div class="badge-wrapper mb-2">
         <div v-html="imgTAG"/>
       </div>
       <v-text-field v-model="imgTAG" outlined readonly hide-details/>
