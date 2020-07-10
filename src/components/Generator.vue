@@ -1,14 +1,17 @@
 <template>
   <div class="generator">
     <input-form
+      :type="type"
       :color="color"
       :label="label"
       :version="version"
+      @changeType="changeType($event)"
       @changeColor="changeColor($event)"
       @changeLabel="changeLabel($event)"
       @changeVersion="changeVersion($event)"
     />
     <preview-icon
+      :type="type"
       :color="color"
       :label="label"
       :version="version"
@@ -27,12 +30,16 @@ export default {
   },
   data () {
     return {
+      type: 'flat',
       color: '#4fc08d',
       label: 'Vue.js',
       version: '2.6.11',
     }
   },
   methods: {
+    changeType (event) {
+      this.type = event
+    },
     changeColor (event) {
       this.color = event
     },

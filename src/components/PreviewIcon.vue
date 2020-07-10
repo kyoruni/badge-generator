@@ -12,13 +12,14 @@
 <script>
 export default {
   props: [
+    'type',
     'color',
     'label',
     'version',
   ],
   computed: {
     imgTAG () {
-      return `<img src="https://img.shields.io/badge/${this.label}-${this.version}-${this.color.replace('#', '')}?&style=flat">`
+      return `<img src="https://img.shields.io/badge/${this.label}-${this.version}-${this.color.replace('#', '')}?&style=${this.type}">`
     }
   }
 }

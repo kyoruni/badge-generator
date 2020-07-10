@@ -1,6 +1,19 @@
 <template>
   <div class="input-form">
     <v-row>
+      <v-col>
+        <v-select
+          v-model="selectType"
+          label="バッジタイプ"
+          outlined
+          hide-details
+          item-text="label"
+          item-value="value"
+          :items="types"
+        />
+      </v-col>
+    </v-row>
+    <v-row>
       <v-col cols="6">
         <v-text-field v-model="inputLabel" label="ラベル" outlined clearable hide-details/>
       </v-col>
@@ -53,18 +66,28 @@
 <script>
 export default {
   props: [
+    'type',
     'color',
     'label',
     'version',
   ],
   data () {
     return {
+      selectType: '',
       selectColor: '',
       inputLabel: '',
       inputVersion: '',
     }
   },
   computed: {
+    types() {
+      return [
+        { label: 'Plastic', value: 'plastic' },
+        { label: 'Flat', value: 'flat' },
+        { label: 'Square', value: 'flat-square' },
+        { label: 'For the Badge', value: 'for-the-badge' },
+      ]
+    },
     defaultColors () {
       return [
         { label: 'Success', color: '#44cc11' },
@@ -91,6 +114,9 @@ export default {
     }
   },
   watch: {
+    selectType (value) {
+      this.$emit('changeType', value)
+    },
     selectColor (value) {
       this.$emit('changeColor', value)
     },
@@ -102,6 +128,7 @@ export default {
     },
   },
   beforeMount () {
+    this.selectType = this.type
     this.selectColor = this.color
     this.inputLabel = this.label
     this.inputVersion = this.version
