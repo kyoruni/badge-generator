@@ -15,6 +15,7 @@ export default {
         { label: 'CircleCI', value: 'circleci' },
         { label: 'CoffeeScript', value: 'coffeescript' },
         { label: 'Composer', value: 'composer' },
+        { label: 'Docker', value: 'docker' },
         { label: 'CSS3', value: 'css3' },
         { label: 'curl', value: 'curl' },
         { label: 'C#', value: 'c-sharp' },
