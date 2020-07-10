@@ -1,6 +1,6 @@
 <template>
   <div class="header-menu">
-    <v-app-bar dark flat :color="mainColor">
+    <v-app-bar dark flat dense :color="mainColor">
       <v-toolbar-title>
         Badge Generator
       </v-toolbar-title>
