@@ -37,11 +37,11 @@ export default {
     'type',
     'color',
     'leftText',
-    'version',
+    'rightText',
   ],
   computed: {
     imgTAG () {
-      return `<img src="https://img.shields.io/badge/${this.leftText}-${this.version}-${this.color.replace('#', '')}?&style=${this.type}">`
+      return `<img src="https://img.shields.io/badge/${this.leftText}-${this.rightText}-${this.color.replace('#', '')}?&style=${this.type}">`
     }
   },
   methods: {

@@ -4,17 +4,17 @@
       :type="type"
       :color="color"
       :leftText="leftText"
-      :version="version"
+      :rightText="rightText"
       @changeType="changeType($event)"
       @changeColor="changeColor($event)"
       @changeLeftText="changeLeftText($event)"
-      @changeVersion="changeVersion($event)"
+      @changeRightText="changeRightText($event)"
     />
     <preview-icon
       :type="type"
       :color="color"
       :leftText="leftText"
-      :version="version"
+      :rightText="rightText"
     />
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
       type: 'flat',
       color: '#44cc11',
       leftText: 'hoge',
-      version: '1.2',
+      rightText: '1.2',
     }
   },
   methods: {
@@ -46,8 +46,8 @@ export default {
     changeLeftText (event) {
       this.leftText = event
     },
-    changeVersion (event) {
-      this.version = event
+    changeRightText (event) {
+      this.rightText = event
     },
   }
 }

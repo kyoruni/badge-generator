@@ -18,7 +18,7 @@
         <v-text-field v-model="inputLeftText" label="左テキスト" outlined clearable hide-details/>
       </v-col>
       <v-col cols="6">
-        <v-text-field v-model="inputVersion" label="右テキスト" outlined clearable hide-details/>
+        <v-text-field v-model="inputRightText" label="右テキスト" outlined clearable hide-details/>
       </v-col>
     </v-row>
     <v-row>
@@ -71,14 +71,14 @@ export default {
     'type',
     'color',
     'leftText',
-    'version',
+    'rightText',
   ],
   data () {
     return {
       selectType: '',
       selectColor: '',
       inputLeftText: '',
-      inputVersion: '',
+      inputRightText: '',
     }
   },
   computed: {
@@ -125,15 +125,15 @@ export default {
     inputLeftText (value) {
       this.$emit('changeLeftText', value)
     },
-    inputVersion (value) {
-      this.$emit('changeVersion', value)
+    inputRightText (value) {
+      this.$emit('changeRightText', value)
     },
   },
   beforeMount () {
     this.selectType = this.type
     this.selectColor = this.color
     this.inputLeftText = this.leftText
-    this.inputVersion = this.version
+    this.inputRightText = this.rightText
   },
 }
 </script>
