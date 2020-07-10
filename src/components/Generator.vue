@@ -31,9 +31,9 @@ export default {
   data () {
     return {
       type: 'flat',
-      color: '#4fc08d',
-      label: 'Vue.js',
-      version: '2.6.11',
+      color: '#44cc11',
+      label: 'hoge',
+      version: '1.2',
     }
   },
   methods: {
