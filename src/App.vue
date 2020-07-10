@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <header-menu/>
-    <v-container>
+    <v-container class="pt-0 pb-0">
       <v-row>
         <v-col cols="10" md="6" class="content-wrapper">
           <generator/>
