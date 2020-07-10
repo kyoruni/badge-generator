@@ -5,7 +5,7 @@
         <div v-html="imgTAG"/>
       </div>
       <div class="d-flex align-center">
-        <v-text-field id="imgTAG" class="mr-2" v-model="imgTAG" outlined readonly hide-details/>
+        <v-text-field id="imgTAG" class="mr-2" background-color="#f0f0f0" v-model="imgTAG" outlined readonly hide-details/>
         <v-btn
           title="クリップボードにコピー"
           icon
