@@ -4,14 +4,19 @@
       <div class="badge-wrapper mb-2">
         <div v-html="imgTAG"/>
       </div>
-      <v-text-field id="imgTAG" v-model="imgTAG" outlined readonly hide-details/>
-      <button
-        v-clipboard:copy="imgTAG"
-        v-clipboard:success="copySuccess"
-        v-clipboard:error="copyError"
-      >
-        コピー
-      </button>
+      <div class="d-flex align-center">
+        <v-text-field id="imgTAG" class="mr-2" v-model="imgTAG" outlined readonly hide-details/>
+        <v-btn
+          depressed
+          dark
+          color="#93b6e8"
+          v-clipboard:copy="imgTAG"
+          v-clipboard:success="copySuccess"
+          v-clipboard:error="copyError"
+        >
+          コピー
+        </v-btn>
+      </div>
     </div>
   </div>
 </template>
