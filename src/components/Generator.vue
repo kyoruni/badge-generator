@@ -6,11 +6,7 @@
       :color="color"
       :leftText="leftText"
       :rightText="rightText"
-      @changeType="changeType($event)"
-      @changeIcon="changeIcon($event)"
-      @changeColor="changeColor($event)"
-      @changeLeftText="changeLeftText($event)"
-      @changeRightText="changeRightText($event)"
+      @changeBadge="changeBadge($event)"
     />
     <preview-icon
       :type="type"
@@ -41,20 +37,24 @@ export default {
     }
   },
   methods: {
-    changeType (event) {
-      this.type = event
-    },
-    changeIcon (event) {
-      this.icon = event
-    },
-    changeColor (event) {
-      this.color = event
-    },
-    changeLeftText (event) {
-      this.leftText = event
-    },
-    changeRightText (event) {
-      this.rightText = event
+    changeBadge (event) {
+      switch (event.prop) {
+        case 'type':
+          this.type = event.value
+          break
+        case 'icon':
+          this.icon = event.value
+          break
+        case 'color':
+          this.color = event.value
+          break
+        case 'leftText':
+          this.leftText = event.value
+          break
+        case 'rightText':
+          this.rightText = event.value
+          break
+      }
     },
   }
 }

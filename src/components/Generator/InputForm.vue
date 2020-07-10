@@ -107,21 +107,21 @@ export default {
   },
   watch: {
     selectType (value) {
-      this.$emit('changeType', value)
+      this.$emit('changeBadge', { prop: 'type', value })
     },
     selectIcon (value) {
-      this.$emit('changeIcon', value)
+      this.$emit('changeBadge', { prop: 'icon', value })
     },
     selectColor (value) {
-      this.$emit('changeColor', value)
+      this.$emit('changeBadge', { prop: 'color', value })
     },
     inputLeftText (value) {
       if (!value) value = ''
-      this.$emit('changeLeftText', value)
+      this.$emit('changeBadge', { prop: 'leftText', value })
     },
     inputRightText (value) {
       if (!value) value = ''
-      this.$emit('changeRightText', value)
+      this.$emit('changeBadge', { prop: 'rightText', value })
     },
   },
   beforeMount () {
