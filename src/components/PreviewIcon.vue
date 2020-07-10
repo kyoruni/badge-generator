@@ -4,7 +4,14 @@
       <div class="badge-wrapper mb-2">
         <div v-html="imgTAG"/>
       </div>
-      <v-text-field v-model="imgTAG" outlined readonly hide-details/>
+      <v-text-field id="imgTAG" v-model="imgTAG" outlined readonly hide-details/>
+      <button
+        v-clipboard:copy="imgTAG"
+        v-clipboard:success="copySuccess"
+        v-clipboard:error="copyError"
+      >
+        コピー
+      </button>
     </div>
   </div>
 </template>
@@ -21,7 +28,15 @@ export default {
     imgTAG () {
       return `<img src="https://img.shields.io/badge/${this.label}-${this.version}-${this.color.replace('#', '')}?&style=${this.type}">`
     }
-  }
+  },
+  methods: {
+    copySuccess () {
+      alert('クリップボードにコピーしました！')
+    },
+    copyError () {
+      alert('コピーに失敗しました…')
+    }
+  },
 }
 </script>
 
