@@ -2,16 +2,19 @@
   <div class="generator">
     <input-form
       :type="type"
+      :icon="icon"
       :color="color"
       :leftText="leftText"
       :rightText="rightText"
       @changeType="changeType($event)"
+      @changeIcon="changeIcon($event)"
       @changeColor="changeColor($event)"
       @changeLeftText="changeLeftText($event)"
       @changeRightText="changeRightText($event)"
     />
     <preview-icon
       :type="type"
+      :icon="icon"
       :color="color"
       :leftText="leftText"
       :rightText="rightText"
@@ -31,6 +34,7 @@ export default {
   data () {
     return {
       type: 'flat',
+      icon: 'Gatsby',
       color: '#44cc11',
       leftText: 'hoge',
       rightText: '1.2',
@@ -39,6 +43,9 @@ export default {
   methods: {
     changeType (event) {
       this.type = event
+    },
+    changeIcon (event) {
+      this.icon = event
     },
     changeColor (event) {
       this.color = event

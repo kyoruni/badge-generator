@@ -1,7 +1,7 @@
 <template>
   <div class="input-form">
     <v-row>
-      <v-col>
+      <v-col colr="6">
         <v-select
           v-model="selectType"
           label="バッジタイプ"
@@ -10,6 +10,17 @@
           item-text="label"
           item-value="value"
           :items="types"
+        />
+      </v-col>
+      <v-col colr="6">
+        <v-select
+          v-model="selectIcon"
+          label="アイコン"
+          outlined
+          hide-details
+          item-text="label"
+          item-value="value"
+          :items="icons"
         />
       </v-col>
     </v-row>
@@ -66,23 +77,30 @@
 </template>
 
 <script>
+import SelectItems from '@/mixins/SelectItems.js'
+
 export default {
   props: [
     'type',
+    'icon',
     'color',
     'leftText',
     'rightText',
   ],
+  mixins: [
+    SelectItems,
+  ],
   data () {
     return {
       selectType: '',
+      selectIcon: '',
       selectColor: '',
       inputLeftText: '',
       inputRightText: '',
     }
   },
   computed: {
-    types() {
+    types () {
       return [
         { label: 'Plastic', value: 'plastic' },
         { label: 'Flat', value: 'flat' },
@@ -119,6 +137,9 @@ export default {
     selectType (value) {
       this.$emit('changeType', value)
     },
+    selectIcon (value) {
+      this.$emit('changeIcon', value)
+    },
     selectColor (value) {
       this.$emit('changeColor', value)
     },
@@ -131,6 +152,7 @@ export default {
   },
   beforeMount () {
     this.selectType = this.type
+    this.selectIcon = this.icon
     this.selectColor = this.color
     this.inputLeftText = this.leftText
     this.inputRightText = this.rightText

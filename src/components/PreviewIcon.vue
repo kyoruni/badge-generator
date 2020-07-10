@@ -35,13 +35,14 @@
 export default {
   props: [
     'type',
+    'icon',
     'color',
     'leftText',
     'rightText',
   ],
   computed: {
     imgTAG () {
-      return `<img src="https://img.shields.io/badge/${this.leftText}-${this.rightText}-${this.color.replace('#', '')}?&style=${this.type}">`
+      return `<img src="https://img.shields.io/badge/${this.leftText}-${this.rightText}-${this.color.replace('#', '')}?&logo=${this.icon}&style=${this.type}">`
     }
   },
   methods: {
