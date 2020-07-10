@@ -67,7 +67,7 @@
           :color="presetColor.color"
           small
           outlined
-          @click="setColorButton(presetColor.color)"
+          @click="setColorButton(presetColor)"
         >
           {{ presetColor.label }}
         </v-btn>
@@ -119,18 +119,19 @@ export default {
     },
     presetColors () {
       return [
-        { label: 'Ruby', color: '#cc0000' },
-        { label: 'PHP', color: '#8892be' },
-        { label: 'Laravel', color: '#ff2d20' },
-        { label: 'Vue.js', color: '#4fc08d' },
-        { label: 'Docker', color: '#53d2f9' },
-        { label: 'Heroku', color: '#79589f' },
+        { label: 'Ruby', color: '#cc0000', icon: 'ruby' },
+        { label: 'PHP', color: '#8892be', icon: 'php' },
+        { label: 'Laravel', color: '#ff2d20', icon: 'laravel' },
+        { label: 'Vue.js', color: '#4fc08d', icon: 'vue.js' },
+        { label: 'Docker', color: '#53d2f9', icon: 'docker' },
+        { label: 'Heroku', color: '#79589f', icon: 'heroku' },
       ]
     }
   },
   methods: {
-    setColorButton (color) {
-      this.selectColor = color
+    setColorButton (preset) {
+      this.selectColor = preset.color
+      this.selectIcon = preset.icon
     }
   },
   watch: {
